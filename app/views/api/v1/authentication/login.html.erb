@@ -1,16 +1,16 @@
 <h1>Login</h1>
 
-<form action="">
+<form action="/api/v1/login" method="POST">
     <label>Insira seu e-mail:</label>
     <br>
-    <input type="email">
+    <input type="email" name="user[email]">
     <br>
     <label>Insira sua senha:</label>
     <br>
-    <input type="password">
+    <input type="password" name="user[password]">
     <br>
     <br>
-    <input type="submit">Entrar</input>
+    <input type="submit">
     <br>
     <br>
     <br>
