@@ -10,9 +10,11 @@
     <tbody>
         <% User.all.each do |user| %>
         <tr>
+            <td><%= user.id %></td>
             <td><%= user.name %></td>
             <td><%= user.email %></td>
             <td><%= user.password %></td>
+            <td><a href="/api/v1/user/<%= user.id %>/delete">Excluir</a></td>
         </tr>
         <% end %>
     </tbody>

@@ -6,7 +6,10 @@ class Api::V1::UserController < ApplicationController
         puts user
     end
 
-    def show
-        
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+
+        redirect_back fallback_location: { action: "index" }
     end
 end
